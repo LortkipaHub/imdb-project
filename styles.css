@@ -1,6 +1,6 @@
 #container{
     min-height: 1px;
-    width: 80%;
+    width: 60%;
     margin: auto;
     
 }
@@ -11,3 +11,31 @@
 
 }
 
+#logo{
+    float: left;
+}
+
+#searchForm{
+    width : 50% ;
+    margin: 10 20;
+    float: left;
+}
+
+#searchField{
+    
+    width: 200px;
+    height : 40px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('images/search_icon.png');
+    
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    transition: width 0.4s ease-in-out;
+}
+
+#searchField:focus {
+    width: 80%;
+  }
