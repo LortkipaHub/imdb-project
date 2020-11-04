@@ -97,14 +97,35 @@
 
 }
 
+#content{
+    background-color : yellow;
+}
+
 
 .most_popular{
     
-    display: inline-block;
+   display: inline-block;
     width: 49%;
     border-style: solid;
-    border-width: 1px;
-    border-color: yellow;
+    border-width: 2px;
+    border-color: grey;
+    
+}
+.best{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+
+
+}
+.best>a{
+    margin-left: 5%;
+    text-decoration: none;
+}
+
+.best>a:hover{
+    color: gray;
+
 }
 
 
