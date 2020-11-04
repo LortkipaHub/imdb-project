@@ -7,7 +7,7 @@
 
 #header{
     height: 60px;
-    background-color: yellow;
+    background-color: gray;
 
 }
 
@@ -39,3 +39,20 @@
 #searchField:focus {
     width: 80%;
   }
+
+#searchButton{
+
+    height: 40px;
+    width : 60px;
+    margin-left: 10px;
+    background-color: yellow;
+    border-radius: 15px;
+    transition-duration: 0.3s;
+
+
+}  
+
+#searchButton:hover{
+    background-color: red;
+
+}
