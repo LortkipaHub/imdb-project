@@ -14,9 +14,11 @@
 
 #logo{
     float: left;
+   
 }
 
 #searchForm{
+    height: 100% ;
     width : 50% ;
     margin: 10 20;
     float: left;
@@ -59,6 +61,7 @@
 }
 
 #menu{
+    display: block;
     float: right;
     
 }
@@ -131,5 +134,64 @@
     color: gray;
 
 }
+#searchFormHiddenButton {
+    display: none; 
+}
+
+#searchFormHidden{
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+
+    #searchForm {
+        display: none !important;
+    }
+
+    #searchFormHiddenButton{
+        display: block;
+        float: right;
+    }
+
+    #searchFormHidden{
+        display: none;
+        widows: 100px;;
+    }
+    #searchFieldHidden{
+        width: 70%;
+        height : 80%;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+        background-color: white;
+        background-image: url('images/search_icon.png');
+        
+        background-repeat: no-repeat;
+        padding: 12px 20px 12px 40px;
+        transition: width 0.4s ease-in-out;
+        float: left;
+    }
+    
+    #hiddenCloseButton{
+        float: right;
+    }
+    
+
+    #menu{
+        display: none;
+        
+    }
+   
+    
+
+    .most_popular{
+        width: 96%;
+    }
+
+}
+
+
+
+
 
 
