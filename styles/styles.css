@@ -13,6 +13,7 @@
 }
 
 #logo{
+    display: block;
     float: left;
    
 }
@@ -32,7 +33,7 @@
     border-radius: 4px;
     font-size: 16px;
     background-color: white;
-    background-image: url('images/search_icon.png');
+    background-image: url('/Users/tesliLortkipa/Desktop/imdb\ project/images/search_icon');
     
     background-repeat: no-repeat;
     padding: 12px 20px 12px 40px;
@@ -81,6 +82,7 @@
 
 }
 
+
 #menu > ul> li >a{
     
     padding-left: 5px;
@@ -98,6 +100,14 @@
 #menu > ul> li >a:hover{
     background-color: chocolate;
 
+}
+
+#hiddenMenuHeader{
+    display: none;
+}
+
+#hiddenMenu{
+    display: none;
 }
 
 #content{
@@ -134,12 +144,13 @@
     color: gray;
 
 }
-#searchFormHiddenButton {
-    display: none; 
+
+#searchFormHiddenButton{
+    display: none ;
 }
 
 #searchFormHidden{
-    display: none;
+    display: none ;
 }
 
 @media only screen and (max-width: 600px) {
@@ -158,8 +169,8 @@
         widows: 100px;;
     }
     #searchFieldHidden{
-        width: 70%;
-        height : 80%;
+        width: 75%;
+        height : 100%;
         border: 2px solid #ccc;
         border-radius: 4px;
         font-size: 16px;
@@ -172,22 +183,42 @@
         float: left;
     }
     
-    #hiddenCloseButton{
+    #hiddenSearchCloseButton{
+        margin-top: 10px;
         float: right;
     }
-    
-
-    #menu{
-        display: none;
-        
-    }
    
+    #menu {
+        display: none;
+    }
+
+    #hiddenMenu{
+        display: none;
+        width: 100% !important;
+        height: 100px !important;
+        float: left !important;
+        background-color: gray;
+    }
     
 
     .most_popular{
         width: 96%;
     }
 
+    #hiddenMenuHeader{
+        
+        padding-left: 5px;
+        padding-right: 5px;
+        height: 100%;
+        background-color: yellow;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none; 
+        
+
+    }
+  
 }
 
 
