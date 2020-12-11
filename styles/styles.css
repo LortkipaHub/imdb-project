@@ -140,10 +140,6 @@
 }
 
 .dropDownMenuItem > ul {
-
-    margin: auto;
-    float: left;
-    width: 100%;
     list-style: none;
 
 }
@@ -246,11 +242,27 @@
         justify-content: center;
         align-content: center;
     }
+    #hiddenMenu > ul {
+        list-style: none;
+
+    }
 
 
     #hiddenMenu > ul > li{
         float: left;
+        
         margin-right: 10%;
+
+    }
+
+    #hiddenMenu > ul > li >ul{
+        list-style: none;
+
+    }
+
+
+    #hiddenMenu > ul > li >ul > li {
+        margin-top: 10px;
 
     }
     
