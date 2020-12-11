@@ -61,6 +61,10 @@
 
 }
 
+a:visited {
+    text-decoration: none;
+  }
+
 #menu{
     display: block;
     float: right;
@@ -155,38 +159,6 @@
 }
 
 
-
-
-.most_popular{
-    
-    display: inline-block;
-    width: 48%;
-    border-style: solid;
-    border-width: 5px;
-    border-color: grey;
-    
-}
-.best{
-    padding-bottom: 5%;
-    display: flex;
-    align-items: center;
-    justify-content: right;
-    border-color: gray;
-    border-style: ridge;
-    border-width: 2px;
-    
-
-}
-.best>a{
-    margin-left: 5%;
-    text-decoration: none;
-}
-
-.best>a:hover{
-    color: gray;
-
-}
-
 #searchFormHiddenButton{
     display: none ;
 }
@@ -263,13 +235,10 @@
 
     #hiddenMenu > ul > li >ul > li {
         margin-top: 10px;
+        margin-bottom: 10px;
 
     }
     
-
-    .most_popular{
-        width: 96%;
-    }
 
     #hiddenMenuHeader{
         
@@ -286,9 +255,3 @@
     }
   
 }
-
-
-
-
-
-
