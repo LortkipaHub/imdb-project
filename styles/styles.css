@@ -64,7 +64,6 @@
 #menu{
     display: block;
     float: right;
-    
 }
 
 #menu > ul {
@@ -114,6 +113,53 @@
     background-color : yellow;
 }
 
+#moviesMenuItem:hover  #moviesDropDown{
+    
+    display: block;
+    
+
+}
+#TVShowsMenuItem:hover  #TVShowsDropDown{
+   
+    display: block;
+    
+
+}
+
+#celebsMenuItem:hover  #celebsDropDown{
+    display: block;
+    
+
+}
+
+.dropDownMenuItem{
+
+    position: absolute;
+    display: none;
+    background-color: chocolate;
+}
+
+.dropDownMenuItem > ul {
+
+    margin: auto;
+    float: left;
+    width: 100%;
+    list-style: none;
+
+}
+
+
+.dropDownMenuItem > ul > li{
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+    float: left;
+    width: 100%;
+
+}
+
+
+
 
 .most_popular{
     
@@ -153,7 +199,7 @@
     display: none ;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 970px) {
 
     #searchForm {
         display: none !important;
@@ -195,9 +241,17 @@
     #hiddenMenu{
         display: none;
         width: 100% !important;
-        height: 100px !important;
         float: left !important;
         background-color: gray;
+        justify-content: center;
+        align-content: center;
+    }
+
+
+    #hiddenMenu > ul > li{
+        float: left;
+        margin-right: 10%;
+
     }
     
 
