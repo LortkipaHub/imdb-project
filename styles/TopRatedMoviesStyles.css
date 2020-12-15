@@ -34,3 +34,23 @@
 
 }
 
+#contentTable > tbody {
+    background-color: yellow;
+}
+
+#contentTable > tbody > tr{
+   
+    text-align: center;
+}
+
+#contentHeader{
+   text-align: center;
+
+}
+
+#sortByField{
+
+    width: 100%;
+    margin-bottom: 10px;
+}
+
