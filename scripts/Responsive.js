@@ -65,4 +65,4 @@ handleResponsive=function(){
 
 
 
-window.onload=handleResponsive;
+window.addEventListener("load",handleResponsive)
