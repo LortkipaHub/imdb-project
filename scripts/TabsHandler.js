@@ -45,6 +45,8 @@ let addTabButtonHandlers = function () {
         let mostPopularTvShowsTab = document.querySelector("#mostPopularTvShowsContent");
         activateTab(mostPopularTvShowsButton,mostPopularTvShowsTab,"#FEFF9E");
     });
+
+    topRatedMoviesButton.click();
 }
 
 
