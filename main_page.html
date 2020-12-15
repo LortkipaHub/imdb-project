@@ -2,9 +2,13 @@
     <head>
         <title>IMDB</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel='stylesheet' href="./styles/MainPageStyles.css"/>
+
         <link rel='stylesheet' href="./styles/MenuAndSearchStyles.css"/>
+        <link rel='stylesheet' href="./styles/SinglePageStyles.css"/>
+
         <script src="scripts/Responsive.js"></script>
+        <script src="scripts/TabsHandler.js"></script>
+
     </head>
 
     <div id="container">
@@ -191,43 +195,725 @@
          
         </div>
 
-        
-
         <div id="content">
-            <div id="top_popular_movies" class="most_popular">
-                <h2>Most Popular Movies</h2>
-                <div class="best">
-                    <img src="images/logo.jpg" height="100" width="100"/> 
-                    <a href="./movie.html"><h3>Movie Name , 9.5/10</h3> </a>
-                </div>
-                <div class="best">
-                    <img src="images/logo.jpg" height="100" width="100"/> 
-                    <a href="./movie.html"><h3>Movie Name , 9.5/10</h3> </a>
-                </div>
-                <div class="best">
-                    <img src="images/logo.jpg" height="100" width="100"/> 
-                    <a href="./movie.html"><h3>Movie Name , 9.5/10</h3> </a>
-                </div>
-                
+
+            <div id="tabButtons">
+
+                <button class="tablinks" id= "topRatedMoviesTabButton" > Top Rated Movies </button>
+                <button class="tablinks" id= "mostPopularMoviesTabButton" > Most Popular Movies </button>
+                <button class="tablinks" id= "topRatedTvShowsTabButton" > Top Rated Tv Shows </button>
+                <button class="tablinks" id= "mostPopularTvSHowsTabButton" > Most Popular Tv Shows </button>
+
             </div>
 
-            <div id="top_popular_TVShows" class="most_popular">
-                <h2>Most Popular TV shows</h2>
-                <div class="best">
-                    <img src="images/logo.jpg" height="100" width="100"/> 
-                    <a href="./tv_show.html"><h3>TV Show Name , 9.5/10</h3> </a>
-                </div>
-                <div class="best">
-                    <img src="images/logo.jpg" height="100" width="100"/> 
-                    <a href="./tv_show.html"><h3>TV Show Name , 9.5/10</h3> </a>
-                </div>
-                <div class="best">
-                    <img src="images/logo.jpg" height="100" width="100"/> 
-                    <a href="./tv_show.html"><h3>TV Show Name , 9.5/10</h3> </a>
-                </div>
+        
+            <div id="tabContents">
+                <table id="topRatedMoviesContent" class="tableContent" >
+                    <colgroup>
+                        <col class = "PictureColumn" style = "width: 5%;">
+                        <col class = "TitleColumn" style = "width: 40%;">
+                        <col class = "RatingColumn" style="width: 55%;">
+    
+                    </colgroup>
+    
+    
+                    <thead>
+                        <tr>
+    
+                            <th>
+                            </th>
+    
+                            <th>
+                                Rank&Title
+                            </th>
+    
+                            <th>
+                                IMBD Rating
+                            </th>
+    
+                        </tr>
+                    </thead>
+    
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img src="images/logo.jpg" height="50" width="50"/> 
+                            </td>
+    
+                            <td>
+                                1)<a href="movie.html"> Movie </a>
+                            </td>
+    
+                            <td>
+                                9.5/10
+                            </td>
+    
+                        </tr>
+    
+                        <tr>
+                            <td>
+                                <img src="images/logo.jpg" height="50" width="50"/> 
+                            </td>
+    
+                            <td>
+                                1) <a href="movie.html"> Movie </a>
+                            </td>
+    
+                            <td>
+                                9.5/10
+                            </td>
+    
+                        </tr>
+    
+                        <tr>
+                            <td>
+                                <img src="images/logo.jpg" height="50" width="50"/> 
+                            </td>
+    
+                            <td>
+                                1) <a href="movie.html"> Movie </a>
+                            </td>
+    
+                            <td>
+                                9.5/10
+                            </td>
+    
+                        </tr>
+    
+    
+                        <tr>
+                            <td>
+                                <img src="images/logo.jpg" height="50" width="50"/> 
+                            </td>
+    
+                            <td>
+                                1)<a href="movie.html"> Movie </a>
+                            </td>
+    
+                            <td>
+                                9.5/10
+                            </td>
+    
+                        </tr>
+    
+    
+                        <tr>
+                            <td>
+                                <img src="images/logo.jpg" height="50" width="50"/> 
+                            </td>
+    
+                            <td>
+                                1) <a href="movie.html"> Movie </a>
+                            </td>
+    
+                            <td>
+                                9.5/10
+                            </td>
+    
+                        </tr>
+    
+    
+                        <tr>
+                            <td>
+                                <img src="images/logo.jpg" height="50" width="50"/> 
+                            </td>
+    
+                            <td>
+                                1) <a href="movie.html"> Movie </a>
+                            </td>
+    
+                            <td>
+                                9.5/10
+                            </td>
+    
+                        </tr>
+    
+    
+                        <tr>
+                            <td>
+                                <img src="images/logo.jpg" height="50" width="50"/> 
+                            </td>
+    
+                            <td>
+                                1) <a href="movie.html"> Movie </a>
+                            </td>
+    
+                            <td>
+                                9.5/10
+                            </td>
+    
+                        </tr>
+    
+    
+                        <tr>
+                            <td>
+                                <img src="images/logo.jpg" height="50" width="50"/> 
+                            </td>
+    
+                            <td>
+                                1) <a href="movie.html"> Movie </a>
+                            </td>
+    
+                            <td>
+                                9.5/10
+                            </td>
+    
+                        </tr>
+    
+    
+    
+                        <tr>
+                            <td>
+                                <img src="images/logo.jpg" height="50" width="50"/> 
+                            </td>
+    
+                            <td>
+                                1) <a href="movie.html"> Movie </a>
+                            </td>
+    
+                            <td>
+                                9.5/10
+                            </td>
+    
+                        </tr>
+    
+                        
+    
+                    </tbody>
+    
+                </table>
+
+                <table id="mostPopularMoviesContent" class="tableContent">
+                    <colgroup>
+                        <col class = "PictureColumn" style = "width: 5%;">
+                        <col class = "TitleColumn" style = "width: 40%;">
+                        <col class = "RatingColumn" style="width: 55%;">
+    
+                    </colgroup>
+    
+    
+                    <thead>
+                        <tr>
+    
+                            <th>
+                            </th>
+    
+                            <th>
+                                Rank&Title
+                            </th>
+    
+                            <th>
+                                IMBD Rating
+                            </th>
+    
+                        </tr>
+                    </thead>
+    
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img src="images/logo.jpg" height="50" width="50"/> 
+                            </td>
+    
+                            <td>
+                                1)<a href="movie.html"> Movie </a>
+                            </td>
+    
+                            <td>
+                                9.5/10
+                            </td>
+    
+                        </tr>
+    
+                        <tr>
+                            <td>
+                                <img src="images/logo.jpg" height="50" width="50"/> 
+                            </td>
+    
+                            <td>
+                                1) <a href="movie.html"> Movie </a>
+                            </td>
+    
+                            <td>
+                                9.5/10
+                            </td>
+    
+                        </tr>
+    
+                        <tr>
+                            <td>
+                                <img src="images/logo.jpg" height="50" width="50"/> 
+                            </td>
+    
+                            <td>
+                                1) <a href="movie.html"> Movie </a>
+                            </td>
+    
+                            <td>
+                                9.5/10
+                            </td>
+    
+                        </tr>
+    
+    
+                        <tr>
+                            <td>
+                                <img src="images/logo.jpg" height="50" width="50"/> 
+                            </td>
+    
+                            <td>
+                                1)<a href="movie.html"> Movie </a>
+                            </td>
+    
+                            <td>
+                                9.5/10
+                            </td>
+    
+                        </tr>
+    
+    
+                        <tr>
+                            <td>
+                                <img src="images/logo.jpg" height="50" width="50"/> 
+                            </td>
+    
+                            <td>
+                                1) <a href="movie.html"> Movie </a>
+                            </td>
+    
+                            <td>
+                                9.5/10
+                            </td>
+    
+                        </tr>
+    
+    
+                        <tr>
+                            <td>
+                                <img src="images/logo.jpg" height="50" width="50"/> 
+                            </td>
+    
+                            <td>
+                                1) <a href="movie.html"> Movie </a>
+                            </td>
+    
+                            <td>
+                                9.5/10
+                            </td>
+    
+                        </tr>
+    
+    
+                        <tr>
+                            <td>
+                                <img src="images/logo.jpg" height="50" width="50"/> 
+                            </td>
+    
+                            <td>
+                                1) <a href="movie.html"> Movie </a>
+                            </td>
+    
+                            <td>
+                                9.5/10
+                            </td>
+    
+                        </tr>
+    
+    
+                        <tr>
+                            <td>
+                                <img src="images/logo.jpg" height="50" width="50"/> 
+                            </td>
+    
+                            <td>
+                                1) <a href="movie.html"> Movie </a>
+                            </td>
+    
+                            <td>
+                                9.5/10
+                            </td>
+    
+                        </tr>
+    
+    
+    
+                        <tr>
+                            <td>
+                                <img src="images/logo.jpg" height="50" width="50"/> 
+                            </td>
+    
+                            <td>
+                                1) <a href="movie.html"> Movie </a>
+                            </td>
+    
+                            <td>
+                                9.5/10
+                            </td>
+    
+                        </tr>
+    
+                        
+    
+                    </tbody>
+    
+                </table>
+
+                <table id="topRatedTvShowsContent" class="tableContent" >
+                    <colgroup>
+                        <col class = "PictureColumn" style = "width: 5%;">
+                        <col class = "TitleColumn" style = "width: 40%;">
+                        <col class = "RatingColumn" style="width: 55%;">
+    
+                    </colgroup>
+    
+    
+                    <thead>
+                        <tr>
+    
+                            <th>
+                            </th>
+    
+                            <th>
+                                Rank&Title
+                            </th>
+    
+                            <th>
+                                IMBD Rating
+                            </th>
+    
+                        </tr>
+                    </thead>
+    
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img src="images/logo.jpg" height="50" width="50"/> 
+                            </td>
+    
+                            <td>
+                                1)<a href="movie.html"> Movie </a>
+                            </td>
+    
+                            <td>
+                                9.5/10
+                            </td>
+    
+                        </tr>
+    
+                        <tr>
+                            <td>
+                                <img src="images/logo.jpg" height="50" width="50"/> 
+                            </td>
+    
+                            <td>
+                                1) <a href="movie.html"> Movie </a>
+                            </td>
+    
+                            <td>
+                                9.5/10
+                            </td>
+    
+                        </tr>
+    
+                        <tr>
+                            <td>
+                                <img src="images/logo.jpg" height="50" width="50"/> 
+                            </td>
+    
+                            <td>
+                                1) <a href="movie.html"> Movie </a>
+                            </td>
+    
+                            <td>
+                                9.5/10
+                            </td>
+    
+                        </tr>
+    
+    
+                        <tr>
+                            <td>
+                                <img src="images/logo.jpg" height="50" width="50"/> 
+                            </td>
+    
+                            <td>
+                                1)<a href="movie.html"> Movie </a>
+                            </td>
+    
+                            <td>
+                                9.5/10
+                            </td>
+    
+                        </tr>
+    
+    
+                        <tr>
+                            <td>
+                                <img src="images/logo.jpg" height="50" width="50"/> 
+                            </td>
+    
+                            <td>
+                                1) <a href="movie.html"> Movie </a>
+                            </td>
+    
+                            <td>
+                                9.5/10
+                            </td>
+    
+                        </tr>
+    
+    
+                        <tr>
+                            <td>
+                                <img src="images/logo.jpg" height="50" width="50"/> 
+                            </td>
+    
+                            <td>
+                                1) <a href="movie.html"> Movie </a>
+                            </td>
+    
+                            <td>
+                                9.5/10
+                            </td>
+    
+                        </tr>
+    
+    
+                        <tr>
+                            <td>
+                                <img src="images/logo.jpg" height="50" width="50"/> 
+                            </td>
+    
+                            <td>
+                                1) <a href="movie.html"> Movie </a>
+                            </td>
+    
+                            <td>
+                                9.5/10
+                            </td>
+    
+                        </tr>
+    
+    
+                        <tr>
+                            <td>
+                                <img src="images/logo.jpg" height="50" width="50"/> 
+                            </td>
+    
+                            <td>
+                                1) <a href="movie.html"> Movie </a>
+                            </td>
+    
+                            <td>
+                                9.5/10
+                            </td>
+    
+                        </tr>
+    
+    
+    
+                        <tr>
+                            <td>
+                                <img src="images/logo.jpg" height="50" width="50"/> 
+                            </td>
+    
+                            <td>
+                                1) <a href="movie.html"> Movie </a>
+                            </td>
+    
+                            <td>
+                                9.5/10
+                            </td>
+    
+                        </tr>
+    
+                        
+    
+                    </tbody>
+    
+                </table>
+
+                <table id="mostPopularTvShowsContent" class="tableContent">
+                    <colgroup>
+                        <col class = "PictureColumn" style = "width: 5%;">
+                        <col class = "TitleColumn" style = "width: 40%;">
+                        <col class = "RatingColumn" style="width: 55%;">
+    
+                    </colgroup>
+    
+    
+                    <thead>
+                        <tr>
+    
+                            <th>
+                            </th>
+    
+                            <th>
+                                Rank&Title
+                            </th>
+    
+                            <th>
+                                IMBD Rating
+                            </th>
+    
+                        </tr>
+                    </thead>
+    
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img src="images/logo.jpg" height="50" width="50"/> 
+                            </td>
+    
+                            <td>
+                                1)<a href="movie.html"> Movie </a>
+                            </td>
+    
+                            <td>
+                                9.5/10
+                            </td>
+    
+                        </tr>
+    
+                        <tr>
+                            <td>
+                                <img src="images/logo.jpg" height="50" width="50"/> 
+                            </td>
+    
+                            <td>
+                                1) <a href="movie.html"> Movie </a>
+                            </td>
+    
+                            <td>
+                                9.5/10
+                            </td>
+    
+                        </tr>
+    
+                        <tr>
+                            <td>
+                                <img src="images/logo.jpg" height="50" width="50"/> 
+                            </td>
+    
+                            <td>
+                                1) <a href="movie.html"> Movie </a>
+                            </td>
+    
+                            <td>
+                                9.5/10
+                            </td>
+    
+                        </tr>
+    
+    
+                        <tr>
+                            <td>
+                                <img src="images/logo.jpg" height="50" width="50"/> 
+                            </td>
+    
+                            <td>
+                                1)<a href="movie.html"> Movie </a>
+                            </td>
+    
+                            <td>
+                                9.5/10
+                            </td>
+    
+                        </tr>
+    
+    
+                        <tr>
+                            <td>
+                                <img src="images/logo.jpg" height="50" width="50"/> 
+                            </td>
+    
+                            <td>
+                                1) <a href="movie.html"> Movie </a>
+                            </td>
+    
+                            <td>
+                                9.5/10
+                            </td>
+    
+                        </tr>
+    
+    
+                        <tr>
+                            <td>
+                                <img src="images/logo.jpg" height="50" width="50"/> 
+                            </td>
+    
+                            <td>
+                                1) <a href="movie.html"> Movie </a>
+                            </td>
+    
+                            <td>
+                                9.5/10
+                            </td>
+    
+                        </tr>
+    
+    
+                        <tr>
+                            <td>
+                                <img src="images/logo.jpg" height="50" width="50"/> 
+                            </td>
+    
+                            <td>
+                                1) <a href="movie.html"> Movie </a>
+                            </td>
+    
+                            <td>
+                                9.5/10
+                            </td>
+    
+                        </tr>
+    
+    
+                        <tr>
+                            <td>
+                                <img src="images/logo.jpg" height="50" width="50"/> 
+                            </td>
+    
+                            <td>
+                                1) <a href="movie.html"> Movie </a>
+                            </td>
+    
+                            <td>
+                                9.5/10
+                            </td>
+    
+                        </tr>
+    
+    
+    
+                        <tr>
+                            <td>
+                                <img src="images/logo.jpg" height="50" width="50"/> 
+                            </td>
+    
+                            <td>
+                                1) <a href="movie.html"> Movie </a>
+                            </td>
+    
+                            <td>
+                                9.5/10
+                            </td>
+    
+                        </tr>
+    
+                        
+    
+                    </tbody>
+    
+                </table>
                 
-            </div>
+
+
+            </div>        
+
         </div>
+
 
         <div id="footer">
             <hr>
