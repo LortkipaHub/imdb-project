@@ -1,0 +1,36 @@
+#content > ul {
+
+    list-style: none;
+    padding-left: 0%;
+}
+
+#content  > ul  > li{
+    width: 100%;
+    margin-top: 10px;
+    background-color: yellow;
+}
+
+.movieItem {
+    
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    border-color: gray;
+    border-style: ridge;
+    border-width: 2px;
+}
+
+
+
+.movieItem > img{
+    padding-left: 2%;
+    padding-right: 2%;
+
+}
+
+
+#contentTable{
+    width: 100%;
+
+}
+
