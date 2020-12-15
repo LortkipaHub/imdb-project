@@ -1,0 +1,80 @@
+#tabButtons {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+  }
+  
+
+#tabButtons > button {
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    width: 25%;
+    
+    padding: 14px 0px;
+  }
+
+  #tabButtons > button:hover {
+    background-color: #ddd;
+  }
+
+  #tabButtons > button.active {
+    background-color: #ccc;
+  }
+
+
+#topRatedMoviesContent{
+    background-color: yellow;
+
+
+}
+
+#mostPopularMoviesContent{
+    background-color: pink;
+
+    
+}
+
+#topRatedTvShowsContent{
+    background-color: salmon;
+
+    
+}
+
+#mostPopularTvShowsContent{
+    background-color: springgreen;
+
+    
+}
+
+
+
+.tableContent{
+    width: 100%;
+}
+
+
+.tableContent > tbody > tr{
+   
+    text-align: center;
+}
+
+
+
+@media only screen and (max-width: 992px){
+     #tabButtons > button{
+        width: 50%;
+     }
+
+}
+
+@media only screen and (max-width: 600px){
+    #tabButtons > button{
+       width: 100%;
+    }
+
+}
+
+
+
