@@ -2,6 +2,7 @@
     overflow: hidden;
     border: 1px solid #ccc;
     background-color: #f1f1f1;
+    
   }
   
 
@@ -12,6 +13,7 @@
     cursor: pointer;
     width: 25%;
     padding: 14px 0px;
+    border-radius: 25px;
   }
 
   #tabButtons > button:hover {
@@ -24,13 +26,14 @@
 
 
 #topRatedMoviesContent{
-    background-color: #D2FFCF;
+    
+    background-color: #FEAD89;
 
 
 }
 
 #mostPopularMoviesContent{
-    background-color: #86D9AC;
+    background-color: #FEFF9E;
 
     
 }
@@ -42,7 +45,7 @@
 }
 
 #mostPopularTvShowsContent{
-    background-color: #FEFF9E;
+    background-color: #86D9AC;
 
     
 }
