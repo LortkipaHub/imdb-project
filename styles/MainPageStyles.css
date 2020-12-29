@@ -20,6 +20,12 @@
     
 
 }
+
+.dataTable > tbody > tr{
+   
+    text-align: center;
+}
+
 .best>a{
     margin-left: 5%;
     text-decoration: none;

@@ -12,7 +12,6 @@ handleSearchButtonClick = function(){
     menu.style.display = 'none';
 
 }
-
 handelCloseButtonClick = function(){
     let logo = document.querySelector("#logo");
     let searchFormHiddenButton = document.querySelector("#searchFormHiddenButton");
