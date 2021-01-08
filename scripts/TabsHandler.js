@@ -47,24 +47,4 @@ let addTabButtonHandlers = function () {
     topRatedMoviesButton.click();
 }
 
-function a (){
-    
-const data = null;
-
-const xhr = new XMLHttpRequest();
-xhr.withCredentials = true;
-
-xhr.addEventListener("readystatechange", function () {
-	if (this.readyState === this.DONE) {
-		console.log(this.responseText);
-	}
-});
-
-xhr.open("GET", "https://movies-tvshows-data-imdb.p.rapidapi.com/?type=get-similar-movies&imdb=tt1375666&page=1");
-xhr.setRequestHeader("x-rapidapi-key", "772da9c3f4msh660e5690bff9be7p1a3805jsnd4ec8e88c144");
-xhr.setRequestHeader("x-rapidapi-host", "movies-tvshows-data-imdb.p.rapidapi.com");
-
-xhr.send(data);
-}
-window.addEventListener("load",a);
 window.addEventListener("load", addTabButtonHandlers);
