@@ -1,23 +1,30 @@
-#tvShowDescription {
+#celebDescription {
     background-color: #d9e4dd;
     display: flex;
     justify-content: flex-start;
     width : 100%;
 }
 
-#tvShowInfo {
+#celebInfo {
     margin-left: 5%;
     align-content: center;
     
 }
 
-#tvShowInfo > h1 {
+#celebInfo > h1 {
     color: white;
 }
 
-#tvShowCast {
-    background-color: turquoise;
+#knownFor {
+    background-color: #b9cced;
 }
+
+#knownFor > tbody > tr{
+   
+    text-align: center;
+}
+
+
 
 @media only screen and (max-width: 600px){
 
@@ -25,16 +32,16 @@
         width: 100px;
         height: 150px;
     }
-    #tvShowInfo > h2,h3,h4{
+    #celebInfo > h2,h3,h4{
         
         margin: 10px;
     }
 
-    #tvShowInfo > h2{
+    #celebInfo > h2{
         font-size: 15px;
     }
     
-    #tvShowInfo > h3,h4{
+    #celebInfo > h3,h4{
         font-size: 10px;
     }
    
