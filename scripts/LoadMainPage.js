@@ -45,17 +45,17 @@ function loadMainPageDataInTables(){
 }
 
 function getDataByMovieIds(movieIds, table, IdExtractor){
-    fetchPromises = []
+    let fetchPromises = []
     for (let i=0 ; i < N_ITEMS_IN_TABLE ; i++){
         id = IdExtractor(movieIds[i])
         titleString = "/title/";
         id = id.substring(titleString.length , id.length-1);
-        fetchPromises[i] = fetch(`https://movie-database-imdb-alternative.p.rapidapi.com/?i=${id}&r=json`, {
-	        "method": "GET",
-	        "headers": {
-		    "x-rapidapi-key": "772da9c3f4msh660e5690bff9be7p1a3805jsnd4ec8e88c144",
-		    "x-rapidapi-host": "movie-database-imdb-alternative.p.rapidapi.com"
-	        }
+        fetchPromises[i] = fetch(`https://imdb-internet-movie-database-unofficial.p.rapidapi.com/film/${id}`, {
+            "method": "GET",
+            "headers": {
+                "x-rapidapi-key": "772da9c3f4msh660e5690bff9be7p1a3805jsnd4ec8e88c144",
+                "x-rapidapi-host": "imdb-internet-movie-database-unofficial.p.rapidapi.com"
+            }
         }).then(data=>data.json());
 
     }
@@ -76,7 +76,7 @@ function addOneRow(table, imageUrl,movieName,movieRating,movieId, position){
             </td>
 
             <td>
-               ${position} )  <a href="movie.html?${movieId}"> ${movieName} </a>
+               ${position} )  <a href="movie.html?id=${movieId}"> ${movieName} </a>
             </td>
 
             <td>
@@ -92,16 +92,15 @@ function addOneRow(table, imageUrl,movieName,movieRating,movieId, position){
 
 
 function loadDataInTable(tableId, movieData){
-    console.log("loadDataInTable hello");
     
     for (let i = 0 ; i < movieData.length ; i++ ){
-        currentData = movieData[i];
-        console.log(currentData);
+        
+        let currentData = movieData[i];
         let table = document.querySelector(tableId);
-        let imageUrl =  currentData["Poster"];
-        let movieName = currentData["Title"];
-        let movieRating = currentData["imdbRating"];
-        let movieId = currentData["imdbID"];
+        let imageUrl =  currentData["poster"];
+        let movieName = currentData["title"];
+        let movieRating = currentData["rating"];
+        let movieId = currentData["id"];
         addOneRow(table,imageUrl,movieName,movieRating,movieId,i+1);
 
     }
