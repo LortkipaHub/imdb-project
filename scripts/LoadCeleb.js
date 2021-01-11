@@ -122,7 +122,7 @@ function addOneRow(table, imageUrl, movieName , movieYear, movieId ){
             </td>
 
             <td>
-                 <a href="celeb.html?id=${movieId}"> ${movieName} </a>
+                 <a href="movie.html?id=${movieId}"> ${movieName} </a>
             </td>
 
             <td>
