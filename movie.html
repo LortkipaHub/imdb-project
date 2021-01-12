@@ -8,6 +8,7 @@
 
         <script src="scripts/Responsive.js"></script>
         <script src="scripts/LoadMovie.js"></script>
+        <script src="scripts/Search.js"></script>
 
     </head>
 
@@ -20,23 +21,38 @@
                 </a>    
             </div>
 
-            <div id="searchForm">
-                <form action="main_page.html" method="GET">
-                    <input type="search" id="searchField" name="q" placeholder="Search">
-                    <input type="submit" id="searchButton" name="Submit" value="Search">
-                </form>
-            </div>
-            <div id="searchFormHiddenButton">
-                <img src = "images/search_icon.png" width="60" height="60" id="hiddenSearchButtonImage" >
-            </div>
+
+            <div id ="searchArea">
+
+                <div id="searchForm">
+                    <form action="main_page.html" method="GET">
+                        <input type="search" id="searchField" name="q" placeholder="Search">
+                        <input type="submit" id="searchButton" name="Submit" value="Search">
+                    </form>
+                </div>
+
+                <div id="suggestionBox">
+                    <ul>
+                        
+                    </ul>
+
+
+                </div>
+
+                <div id="searchFormHiddenButton">
+                    <img src = "images/search_icon.png" width="60" height="60" id="hiddenSearchButtonImage" >
+                </div>
 
             
-            <div id="searchFormHidden">
+                <div id="searchFormHidden">
               
-                <form action="main_page.html" method="GET">
-                    <input type="search" id="searchFieldHidden" name="q" placeholder="Search">
-                </form>
-                <img src="images/times-solid.svg" width="60" height="40" id="hiddenSearchCloseButton">
+                    <form action="main_page.html" method="GET">
+                       <input type="search" id="searchFieldHidden" name="q" placeholder="Search">
+                    </form>
+
+                    <img src="images/times-solid.svg" width="60" height="40" id="hiddenSearchCloseButton">
+
+                </div>
 
             </div>
 
@@ -194,6 +210,7 @@
             </div>
          
         </div>
+        
 
         <div id="content">
             <div id="movieDescription">

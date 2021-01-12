@@ -60,31 +60,13 @@ function loadDataOnPage(data){
                     currentActor = data['names'][i];
                     if( actorId == currentActor['id'] ){
                         actorImage = currentActor['image'];
-                        console.log(actorImage);
                         addOneRow(table , actorImage , actorName , actorId );
                     }
-        
-        
                 }
-        
-        
-            }
-            
-            
-            ))
-
-        
+             }
+        ))
 
     }
-    
-
-
-    
-
-    console.log(data);
-
-
-
 
 }
 

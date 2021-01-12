@@ -24,9 +24,6 @@ handelCloseButtonClick = function(){
     searchFormHidden.style.display = 'none';
     menuHeader.style.display = 'flex';
     menu.style.display = 'none';
-    console.log(menuHeader.style.display)
-
-
 
 }
 

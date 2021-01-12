@@ -41,6 +41,56 @@
     transition: width 0.4s ease-in-out;
 }
 
+#suggestionBox{
+   
+    width: 25%;
+    top: 60px;
+    left: 15%;
+    margin-left: 75px;
+    position: absolute;
+    z-index: 1;
+    display: none;
+}
+
+
+.searchResultImage{
+    width: 30%;
+}
+
+.searchResultInfo{
+    display: flex;
+    align-items: center;
+    width:60%;
+}
+
+
+
+
+#suggestionBox>ul{
+    margin-top: 0px;
+    margin-left: 0px;
+    padding-left: 0px;
+    list-style-type: none;
+}
+
+#suggestionBox>ul>li{
+    margin-left: 0px;
+}
+
+
+.suggestion{
+    border: 2px solid #ccc;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    background-color: yellow;
+    display:flex;
+    justify-content: flex-start;
+
+
+}
+
+
+
 #searchField:focus {
     width: 70%;
   }
@@ -209,6 +259,14 @@ a:visited {
         padding: 12px 20px 12px 40px;
         transition: width 0.4s ease-in-out;
         float: left;
+    }
+
+
+    #suggestionBox{
+        width: 52.5%;
+        margin-left: 0px;
+        margin-top:7px;
+
     }
     
     #hiddenSearchCloseButton{
