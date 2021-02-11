@@ -10,6 +10,7 @@
         <script src="scripts/TabsHandler.js"></script>
         <script src="scripts/LoadMainPage.js"></script>
         <script src="scripts/Search.js"></script>
+        <script src="scripts/MenuItems.js"></script>
 
     </head>
 
@@ -26,7 +27,7 @@
             <div id ="searchArea">
 
                 <div id="searchForm">
-                    <form action="main_page.html" method="GET">
+                    <form action="search.html" method="GET">
                         <input type="search" id="searchField" name="q" placeholder="Search">
                         <input type="submit" id="searchButton" name="Submit" value="Search">
                     </form>
@@ -66,16 +67,12 @@
                     <li> 
                         <a > Movies </a>
                         <ul>
-                            <li>
-                                <a href="./top_rated_movies.html"> Top Rated Movies </a>
+                            <li class = "RandomTopRatedMovie">
+                                <a > Random Top Rated Movie </a>
                                
                             </li>
-                            <li>
-                                <a href="./most_popular_movies.html"> Most Popular Movies </a>
-                               
-                            </li>
-                            <li>
-                                <a href="./main_page.html"> Movies </a>
+                            <li class = "RandomMostPopularMovie">
+                                <a> Random Most Popular Movie </a>
                                
                             </li>
 
@@ -85,16 +82,12 @@
                     <li>
                          <a>TV shows</a>
                          <ul>
-                            <li>
-                                <a href="./top_rated_tv_shows.html" > Top Rated TV Shows </a>
+                            <li class = "RandomTopRatedTvShow">
+                                <a > Random Top Rated TV Show </a>
                                
                             </li>
-                            <li>
-                                <a href="./most_popular_tv_shows.html"> Most Popular TV Shows </a>
-                               
-                            </li>
-                            <li>
-                                <a href="./main_page.html"> TV Shows </a>
+                            <li class = "RandomMostPopularTvShow">
+                                <a > Random Most Popular TV Show </a>
                                
                             </li>
 
@@ -134,16 +127,12 @@
                         <a> Movies </a>
                         <div id="moviesDropDown" class ="dropDownMenuItem">
                             <ul>
-                                <li>
-                                    <a href="./top_rated_movies.html"> Top Rated Movies </a>
+                                <li class = "RandomTopRatedMovie">
+                                    <a> Random Top Rated Movie </a>
                                    
                                 </li>
-                                <li>
-                                    <a href="./most_popular_movies.html"> Most Popular Movies </a>
-                                   
-                                </li>
-                                <li>
-                                    <a href="./main_page.html"> Movies </a>
+                                <li class = "RandomMostPopularMovie">
+                                    <a> Random Most Popular Movie </a>
                                    
                                 </li>
 
@@ -160,16 +149,12 @@
 
                         <div id="TvShowsDropDown" class ="dropDownMenuItem">
                             <ul>
-                                <li>
-                                    <a href="./top_rated_tv_shows.html"> Top Rated TV Shows </a>
+                                <li class = "RandomTopRatedTvShow">
+                                    <a > Random Top Rated TV Show </a>
                                    
                                 </li>
-                                <li>
-                                    <a href="./most_popular_tv_shows.html">Most Popular TV Shows </a>
-                                   
-                                </li>
-                                <li>
-                                    <a href="./main_page.html"> TV Shows </a>
+                                <li class = "RandomMostPopularTvShow">
+                                    <a > Random Most Popular TV Show </a>
                                    
                                 </li>
 

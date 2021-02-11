@@ -1,0 +1,16 @@
+#NamesResults {
+    background-color:  #FEAD89;
+    
+}
+
+#TitlesResults {
+    background-color: #FEFF9E;
+}
+
+.ResultsDiv {
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+

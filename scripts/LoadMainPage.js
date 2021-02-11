@@ -1,4 +1,4 @@
-const N_ITEMS_IN_TABLE = 20;
+const N_ITEMS_IN_TABLE = 1;
 
 
 function load(address, table, IdExtractor){
@@ -27,19 +27,19 @@ function getIdForTopRated(data){
 
 }
 
-function getIdForMositPopular(data){
+function getIdForMostPopular(data){
     return data
 }
 function loadMainPageDataInTables(){
     load("https://imdb8.p.rapidapi.com/title/get-top-rated-movies", "#topRatedMoviesContent", getIdForTopRated);
 
     load("https://imdb8.p.rapidapi.com/title/get-most-popular-movies?homeCountry=US&purchaseCountry=US&currentCountry=US",
-                                                                        "#mostPopularMoviesContent", getIdForMositPopular);
+                                                                        "#mostPopularMoviesContent", getIdForMostPopular);
 
     load("https://imdb8.p.rapidapi.com/title/get-top-rated-tv-shows", "#topRatedTvShowsContent", getIdForTopRated);
 
     load("https://imdb8.p.rapidapi.com/title/get-most-popular-tv-shows?homeCountry=US&purchaseCountry=US&currentCountry=US",
-                                                                     "#mostPopularTvShowsContent", getIdForMositPopular);
+                                                                     "#mostPopularTvShowsContent", getIdForMostPopular);
 
 
 }

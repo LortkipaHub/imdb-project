@@ -1,4 +1,4 @@
-const MAX_EACH_SEARCH_RESULTS = 5;
+const MAX_EACH_SEARCH_RESULTS = 3;
 
 function handleSearchSuggestions(){
     let searchTextField =  document.querySelector("#searchField");
