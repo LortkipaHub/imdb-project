@@ -3,6 +3,8 @@ function addMenuItemListeners(){
     let RandomMostPopularMovieItems = document.querySelectorAll(".RandomMostPopularMovie");
     let RandomTopRatedTvShowItems = document.querySelectorAll(".RandomTopRatedTvShow");
     let RandomMostPopularTvShowItems = document.querySelectorAll(".RandomMostPopularTvShow");
+    let RandomMostPopularCelebItems = document.querySelectorAll(".RandomMostPopularCeleb");
+    let RandomBornTodayCelebItems =  document.querySelectorAll(".RandomBornTodayCeleb");
 
     addListener(RandomTopRatedMovieItems[0] , "https://imdb8.p.rapidapi.com/title/get-top-rated-movies" ,  "movie.html",  getIdForTopRated );
     addListener(RandomTopRatedMovieItems[1] , "https://imdb8.p.rapidapi.com/title/get-top-rated-movies" ,  "movie.html",  getIdForTopRated );
@@ -17,11 +19,28 @@ function addMenuItemListeners(){
     addListener(RandomTopRatedTvShowItems[1], "https://imdb8.p.rapidapi.com/title/get-top-rated-tv-shows",   "movie.html",  getIdForTopRated )
 
     addListener(RandomMostPopularTvShowItems[0], "https://imdb8.p.rapidapi.com/title/get-most-popular-tv-shows?homeCountry=US&purchaseCountry=US&currentCountry=US",
-    "#mostPopularTvShowsContent" , "movie.html", getIdForMostPopular)
+    "movie.html", getIdForMostPopular)
 
     addListener(RandomMostPopularTvShowItems[1], "https://imdb8.p.rapidapi.com/title/get-most-popular-tv-shows?homeCountry=US&purchaseCountry=US&currentCountry=US",
-    "#mostPopularTvShowsContent" , "movie.html", getIdForMostPopular)
+    "movie.html", getIdForMostPopular)
 
+    addListener(RandomMostPopularCelebItems[0], "https://imdb8.p.rapidapi.com/actors/list-most-popular-celebs" , "celeb.html" , getIdForCeleb)
+    addListener(RandomMostPopularCelebItems[1], "https://imdb8.p.rapidapi.com/actors/list-most-popular-celebs" , "celeb.html" , getIdForCeleb)
+    
+    
+    addListener(RandomBornTodayCelebItems[0], getBornTodayLink() , "celeb.html" , getIdForCeleb)
+    addListener(RandomBornTodayCelebItems[1], getBornTodayLink() , "celeb.html" , getIdForCeleb)
+
+
+
+}
+
+function getBornTodayLink(){
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+
+    return `https://imdb8.p.rapidapi.com/actors/list-born-today?month=${mm}&day=${dd}`
 
 
 }
@@ -31,12 +50,27 @@ function addListener(item , link , page , IdExtractor){
 }
 
 function getIdForTopRated(data){
-    return  data['id'];
+    let titleString = "/title/";
+
+    var id = data['id'];
+    id = id.substring(titleString.length , id.length-1);
+    return  id
 
 }
 
 function getIdForMostPopular(data){
-    return data
+    let titleString = "/title/";
+    var id = data;
+    id = id.substring(titleString.length , id.length-1);
+    return id
+}
+
+function getIdForCeleb(data){
+    let nameString = "/name/"
+    var id = data;
+    id = id.substring(nameString.length , id.length-1);
+    return id
+
 }
 
 function loadDataWithLink(address, pageName, IdExtractor){
@@ -65,8 +99,7 @@ function redirectToRandomPage(data, pageName, IdExtractor){
     console.log(data)
     let item = data[Math.floor(Math.random() * data.length)];
     var id = IdExtractor(item)
-    let titleString = "/title/";
-    id = id.substring(titleString.length , id.length-1);
+
     window.location.href = `./${pageName}?id=${id}`
 
 

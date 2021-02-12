@@ -79,11 +79,6 @@ function getActorImagePromise(name){
 		"x-rapidapi-host": "imdb-internet-movie-database-unofficial.p.rapidapi.com"
 	}
     })
-
-
-
-
-
 }
 
 function addOneRow(table, imageUrl, actorName , actorId ){
