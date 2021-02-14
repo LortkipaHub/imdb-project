@@ -75,9 +75,9 @@ function addDataToTable(data ,  table){
 }
 
 function addOneItemToTable(table, resultImage , resultTitle , resultId){
-    let forwardPage = "#movie";
+    let forwardPage = "/#movie";
     if(resultId[0] != "t"){
-        forwardPage= "#celeb";
+        forwardPage= "/#celeb";
     }
   
     let newHtml =        
