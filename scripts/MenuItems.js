@@ -6,30 +6,30 @@ function addMenuItemListeners(){
     let RandomMostPopularCelebItems = document.querySelectorAll(".RandomMostPopularCeleb");
     let RandomBornTodayCelebItems =  document.querySelectorAll(".RandomBornTodayCeleb");
 
-    addListener(RandomTopRatedMovieItems[0] , "https://imdb8.p.rapidapi.com/title/get-top-rated-movies" ,  "movie.html",  getIdForTopRated );
-    addListener(RandomTopRatedMovieItems[1] , "https://imdb8.p.rapidapi.com/title/get-top-rated-movies" ,  "movie.html",  getIdForTopRated );
+    addListener(RandomTopRatedMovieItems[0] , "https://imdb8.p.rapidapi.com/title/get-top-rated-movies" ,  "#movie",  getIdForTopRated );
+    addListener(RandomTopRatedMovieItems[1] , "https://imdb8.p.rapidapi.com/title/get-top-rated-movies" ,  "#movie",  getIdForTopRated );
 
     addListener(RandomMostPopularMovieItems[0] , "https://imdb8.p.rapidapi.com/title/get-most-popular-movies?homeCountry=US&purchaseCountry=US&currentCountry=US", 
-    "movie.html" , getIdForMostPopular);
+    "#movie" , getIdForMostPopular);
 
     addListener(RandomMostPopularMovieItems[1] , "https://imdb8.p.rapidapi.com/title/get-most-popular-movies?homeCountry=US&purchaseCountry=US&currentCountry=US", 
-    "movie.html" , getIdForMostPopular);
+    "#movie" , getIdForMostPopular);
 
-    addListener(RandomTopRatedTvShowItems[0], "https://imdb8.p.rapidapi.com/title/get-top-rated-tv-shows",   "movie.html",  getIdForTopRated )
-    addListener(RandomTopRatedTvShowItems[1], "https://imdb8.p.rapidapi.com/title/get-top-rated-tv-shows",   "movie.html",  getIdForTopRated )
+    addListener(RandomTopRatedTvShowItems[0], "https://imdb8.p.rapidapi.com/title/get-top-rated-tv-shows",   "#movie",  getIdForTopRated )
+    addListener(RandomTopRatedTvShowItems[1], "https://imdb8.p.rapidapi.com/title/get-top-rated-tv-shows",   "#movie",  getIdForTopRated )
 
     addListener(RandomMostPopularTvShowItems[0], "https://imdb8.p.rapidapi.com/title/get-most-popular-tv-shows?homeCountry=US&purchaseCountry=US&currentCountry=US",
-    "movie.html", getIdForMostPopular)
+    "#movie", getIdForMostPopular)
 
     addListener(RandomMostPopularTvShowItems[1], "https://imdb8.p.rapidapi.com/title/get-most-popular-tv-shows?homeCountry=US&purchaseCountry=US&currentCountry=US",
-    "movie.html", getIdForMostPopular)
+    "#movie", getIdForMostPopular)
 
-    addListener(RandomMostPopularCelebItems[0], "https://imdb8.p.rapidapi.com/actors/list-most-popular-celebs" , "celeb.html" , getIdForCeleb)
-    addListener(RandomMostPopularCelebItems[1], "https://imdb8.p.rapidapi.com/actors/list-most-popular-celebs" , "celeb.html" , getIdForCeleb)
+    addListener(RandomMostPopularCelebItems[0], "https://imdb8.p.rapidapi.com/actors/list-most-popular-celebs" , "#celeb" , getIdForCeleb)
+    addListener(RandomMostPopularCelebItems[1], "https://imdb8.p.rapidapi.com/actors/list-most-popular-celebs" , "#celeb" , getIdForCeleb)
     
     
-    addListener(RandomBornTodayCelebItems[0], getBornTodayLink() , "celeb.html" , getIdForCeleb)
-    addListener(RandomBornTodayCelebItems[1], getBornTodayLink() , "celeb.html" , getIdForCeleb)
+    addListener(RandomBornTodayCelebItems[0], getBornTodayLink() , "#celeb" , getIdForCeleb)
+    addListener(RandomBornTodayCelebItems[1], getBornTodayLink() , "#celeb" , getIdForCeleb)
 
 
 
@@ -75,12 +75,12 @@ function getIdForCeleb(data){
 
 function loadDataWithLink(address, pageName, IdExtractor){
         
-    console.log("aaaa")
+    
 
     fetch(address, {
         "method": "GET",
         "headers": {
-            "x-rapidapi-key": "772da9c3f4msh660e5690bff9be7p1a3805jsnd4ec8e88c144",
+            "x-rapidapi-key": "c142253091msh0bc8b7c320fa0f9p148838jsn74ba0ed9bc02",
             "x-rapidapi-host": "imdb8.p.rapidapi.com"
         }
     })
@@ -96,7 +96,6 @@ function loadDataWithLink(address, pageName, IdExtractor){
 }
 
 function redirectToRandomPage(data, pageName, IdExtractor){
-    console.log(data)
     let item = data[Math.floor(Math.random() * data.length)];
     var id = IdExtractor(item)
 

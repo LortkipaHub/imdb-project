@@ -51,6 +51,11 @@ handleResponsiveMenu = function (){
         
     } )
 
+    
+    window.addEventListener("hashchange" , function(){
+        menu.style.display = 'none';
+    })
+
 }
 
 handleResponsive=function(){

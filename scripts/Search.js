@@ -11,6 +11,11 @@ function handleSearchSuggestions(){
     searchTextField.addEventListener("input", loadSearchResultInSuggestion);
     responsiveSearchTextField.addEventListener("input", loadSearchResultInSuggestion);
 
+    window.addEventListener("hashchange" , function(){
+        console.log("aaaa")
+        hideSuggestionBox();
+    })
+
 }
 
 function showSuggestionBox(){
@@ -18,15 +23,16 @@ function showSuggestionBox(){
     suggestionBox.style.display = "block";
 }
 
+
 function hideSuggestionBox(e){
     let suggestionBox = document.querySelector("#suggestionBox");
     let searchArea = document.querySelector("#searchArea");
 
     if (suggestionBox.style.display != "block")
         return
-    if (searchArea.contains(e.target))
+
+    if (e != undefined && searchArea.contains(e.target))
         return
-    
     suggestionBox.style.display = "none";
 
 
@@ -83,9 +89,9 @@ function addDataToSuggestionBox(data){
 
 function addOneItemToSuggestionBox(resultImage , resultTitle, resultId){
     let suggestionBox = document.querySelector("#suggestionBox>ul");
-    let forwardPage = "movie.html";
+    let forwardPage = "#movie";
     if(resultId[0] != "t"){
-        forwardPage= "celeb.html";
+        forwardPage= "#celeb";
     }
     let newHtml = `                    
     <li>

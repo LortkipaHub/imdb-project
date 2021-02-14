@@ -1,7 +1,8 @@
 function loadMovieContent(){
 
-    const queryString = window.location.search;
-
+    var href = window.location.href;
+    var index = href.lastIndexOf("?")
+    let queryString = href.substring(index)
     const urlParams = new URLSearchParams(queryString); 
 
     let id = urlParams.get('id');
@@ -90,7 +91,7 @@ function addOneRow(table, imageUrl, actorName , actorId ){
             </td>
 
             <td>
-                 <a href="celeb.html?id=${actorId}"> ${actorName} </a>
+                 <a href="#celeb?id=${actorId}"> ${actorName} </a>
             </td>
 
             </tr>
@@ -103,5 +104,4 @@ function addOneRow(table, imageUrl, actorName , actorId ){
 
 
 
-
-window.addEventListener("load",loadMovieContent);
+loadMovieContent();

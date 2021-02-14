@@ -1,4 +1,4 @@
-const N_ITEMS_IN_TABLE = 1;
+const N_ITEMS_IN_TABLE = 10;
 
 
 function load(address, table, IdExtractor){
@@ -7,7 +7,7 @@ function load(address, table, IdExtractor){
     fetch(address, {
         "method": "GET",
         "headers": {
-            "x-rapidapi-key": "772da9c3f4msh660e5690bff9be7p1a3805jsnd4ec8e88c144",
+            "x-rapidapi-key": "c142253091msh0bc8b7c320fa0f9p148838jsn74ba0ed9bc02",
             "x-rapidapi-host": "imdb8.p.rapidapi.com"
         }
     })
@@ -53,7 +53,7 @@ function getDataByMovieIds(movieIds, table, IdExtractor){
         fetchPromises[i] = fetch(`https://imdb-internet-movie-database-unofficial.p.rapidapi.com/film/${id}`, {
             "method": "GET",
             "headers": {
-                "x-rapidapi-key": "772da9c3f4msh660e5690bff9be7p1a3805jsnd4ec8e88c144",
+                "x-rapidapi-key": "c142253091msh0bc8b7c320fa0f9p148838jsn74ba0ed9bc02",
                 "x-rapidapi-host": "imdb-internet-movie-database-unofficial.p.rapidapi.com"
             }
         }).then(data=>data.json());
@@ -76,7 +76,7 @@ function addOneRow(table, imageUrl,movieName,movieRating,movieId, position){
             </td>
 
             <td>
-               ${position} )  <a href="movie.html?id=${movieId}"> ${movieName} </a>
+               ${position} )  <a href="#movie?id=${movieId}"> ${movieName} </a>
             </td>
 
             <td>
@@ -113,7 +113,6 @@ function loadDataInTable(tableId, movieData){
 
 
 
-
-window.addEventListener("load",loadMainPageDataInTables);
+loadMainPageDataInTables();
 
 

@@ -7,7 +7,7 @@ function loadCelebInfo(id){
     fetch(`https://imdb8.p.rapidapi.com/actors/get-bio?nconst=${id}`, {
         "method": "GET",
         "headers": {
-            "x-rapidapi-key": "772da9c3f4msh660e5690bff9be7p1a3805jsnd4ec8e88c144",
+            "x-rapidapi-key": "c142253091msh0bc8b7c320fa0f9p148838jsn74ba0ed9bc02",
             "x-rapidapi-host": "imdb8.p.rapidapi.com"
         }
     })
@@ -28,7 +28,7 @@ function loadKnownFor(id){
     fetch(`https://imdb8.p.rapidapi.com/actors/get-all-filmography?nconst=${id}`, {
 	"method": "GET",
 	"headers": {
-		"x-rapidapi-key": "772da9c3f4msh660e5690bff9be7p1a3805jsnd4ec8e88c144",
+		"x-rapidapi-key": "c142253091msh0bc8b7c320fa0f9p148838jsn74ba0ed9bc02",
 		"x-rapidapi-host": "imdb8.p.rapidapi.com"
 	}
     })   
@@ -44,12 +44,13 @@ function loadKnownFor(id){
 
 function loadDataOnPage(){
 
-    const queryString = window.location.search;
 
+    var href = window.location.href;
+    var index = href.lastIndexOf("?")
+    let queryString = href.substring(index)
     const urlParams = new URLSearchParams(queryString); 
 
     let id = urlParams.get('id');
-
     loadCelebInfo(id);
     loadKnownFor(id);
 
@@ -80,14 +81,13 @@ function fillTableWithData(data){
 
     let table = document.querySelector("#knownFor>tbody");
     let knownFor = data['filmography'];
-    console.log(knownFor)
+
     for (let i = 0 ; i < knownFor.length; i++ ){
 
         if (i ==  MAX_ELEM_TABLE)
             return
 
         let currentMovie = knownFor[i]
-        console.log(currentMovie);
         let movieImage = currentMovie['image'];
         let movieImageUrl;
         if (movieImage == undefined)
@@ -122,7 +122,7 @@ function addOneRow(table, imageUrl, movieName , movieYear, movieId ){
             </td>
 
             <td>
-                 <a href="movie.html?id=${movieId}"> ${movieName} </a>
+                 <a href="#movie?id=${movieId}"> ${movieName} </a>
             </td>
 
             <td>
@@ -139,5 +139,4 @@ function addOneRow(table, imageUrl, movieName , movieYear, movieId ){
 
 
 
-
-window.addEventListener("load",loadDataOnPage);
+loadDataOnPage();

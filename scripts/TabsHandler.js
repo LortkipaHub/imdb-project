@@ -47,4 +47,4 @@ let addTabButtonHandlers = function () {
     topRatedMoviesButton.click();
 }
 
-window.addEventListener("load", addTabButtonHandlers);
+addTabButtonHandlers();

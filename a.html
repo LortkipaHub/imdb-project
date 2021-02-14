@@ -5,17 +5,11 @@
 
         <link rel='stylesheet' href="./styles/MenuAndSearchStyles.css"/>
         <link rel='stylesheet' href="./styles/SinglePageStyles.css"/>
-        <link rel='stylesheet' href="./styles/CelebStyles.css"/>
-        <link rel='stylesheet' href="./styles/MovieStyles.css"/>
-        <link rel='stylesheet' href="./styles/SearchStyles.css"/>
-
 
         <script src="//unpkg.com/navigo"></script>
-        <script src="scripts/SinglePage.js"></script>
         <script src="scripts/Responsive.js"></script>
-        <script src="scripts/MenuItems.js"></script>
         <script src="scripts/Search.js"></script>
-       
+        <script src="scripts/SinglePage.js"></script>
 
     </head>
 
@@ -23,7 +17,7 @@
 
         <div id ="header">
             <div id = "logo">
-                <a href="./#"> 
+                <a href="./"> 
                     <img src="images/logo.jpg"/ width="60" height="60" >
                 </a>    
             </div>
@@ -32,7 +26,7 @@
             <div id ="searchArea">
 
                 <div id="searchForm">
-                    <form action="/search" method="GET">
+                    <form action="search.html" method="GET">
                         <input type="search" id="searchField" name="q" placeholder="Search">
                         <input type="submit" id="searchButton" name="Submit" value="Search">
                     </form>
@@ -53,7 +47,7 @@
             
                 <div id="searchFormHidden">
               
-                    <form action="/search" method="GET">
+                    <form action="index.html" method="GET">
                        <input type="search" id="searchFieldHidden" name="q" placeholder="Search">
                     </form>
 
@@ -196,147 +190,7 @@
         
         <div id="content">
 
-            <div id="tabButtons">
-
-                <button class="tablinks" id= "topRatedMoviesTabButton" > Top Rated Movies </button>
-                <button class="tablinks" id= "mostPopularMoviesTabButton" > Most Popular Movies </button>
-                <button class="tablinks" id= "topRatedTvShowsTabButton" > Top Rated Tv Shows </button>
-                <button class="tablinks" id= "mostPopularTvSHowsTabButton" > Most Popular Tv Shows </button>
-
-            </div>
-
-        
-            <div id="tabContents">
-                <table id="topRatedMoviesContent" class="tableContent" >
-                    <colgroup>
-                        <col class = "PictureColumn" style = "width: 5%;">
-                        <col class = "TitleColumn" style = "width: 40%;">
-                        <col class = "RatingColumn" style="width: 55%;">
     
-                    </colgroup>
-    
-    
-                    <thead>
-                        <tr>
-    
-                            <th>
-                            </th>
-    
-                            <th>
-                                Rank&Title
-                            </th>
-    
-                            <th>
-                                IMBD Rating
-                            </th>
-    
-                        </tr>
-                    </thead>
-    
-                    <tbody>
-                    </tbody>
-    
-                </table>
-
-                <table id="mostPopularMoviesContent" class="tableContent">
-                    <colgroup>
-                        <col class = "PictureColumn" style = "width: 5%;">
-                        <col class = "TitleColumn" style = "width: 40%;">
-                        <col class = "RatingColumn" style="width: 55%;">
-    
-                    </colgroup>
-    
-    
-                    <thead>
-                        <tr>
-    
-                            <th>
-                            </th>
-    
-                            <th>
-                                Rank&Title
-                            </th>
-    
-                            <th>
-                                IMBD Rating
-                            </th>
-    
-                        </tr>
-                    </thead>
-    
-                    <tbody>
-                    </tbody>
-    
-                </table>
-
-                <table id="topRatedTvShowsContent" class="tableContent" >
-                    <colgroup>
-                        <col class = "PictureColumn" style = "width: 5%;">
-                        <col class = "TitleColumn" style = "width: 40%;">
-                        <col class = "RatingColumn" style="width: 55%;">
-    
-                    </colgroup>
-    
-    
-                    <thead>
-                        <tr>
-    
-                            <th>
-                            </th>
-    
-                            <th>
-                                Rank&Title
-                            </th>
-    
-                            <th>
-                                IMBD Rating
-                            </th>
-    
-                        </tr>
-                    </thead>
-    
-                    
-                    <tbody>
-                    </tbody>
-                  
-    
-                </table>
-
-                <table id="mostPopularTvShowsContent" class="tableContent">
-                    <colgroup>
-                        <col class = "PictureColumn" style = "width: 5%;">
-                        <col class = "TitleColumn" style = "width: 40%;">
-                        <col class = "RatingColumn" style="width: 55%;">
-    
-                    </colgroup>
-    
-    
-                    <thead>
-                        <tr>
-    
-                            <th>
-                            </th>
-    
-                            <th>
-                                Rank&Title
-                            </th>
-    
-                            <th>
-                                IMBD Rating
-                            </th>
-    
-                        </tr>
-                    </thead>
-    
-                   
-                    <tbody>
-                    </tbody>
-                    
-                </table>
-                
-
-
-            </div>        
 
         </div>
 

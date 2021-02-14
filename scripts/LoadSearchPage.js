@@ -1,20 +1,23 @@
-const MAX_SEARCH_RESULTS = 3;
+const MAX_SEARCH_RESULTS = 5;
 
 
 
 function handlePageLoad(){
 
     searchKeyWord = getSearchKeyWord();
-    console.log(searchKeyWord)
     loadData(searchKeyWord);
 
 
 }
 
 function getSearchKeyWord(){
-    currentUrlString = window.location.href;
-    var url = new URL(currentUrlString);
-    return url.searchParams.get("q");  
+    
+    var href = window.location.href;
+    var index = href.lastIndexOf("?")
+    let queryString = href.substring(index)
+    const urlParams = new URLSearchParams(queryString); 
+
+    return urlParams.get("q");  
 }
 
 function loadData(searchKeyWord){
@@ -72,9 +75,9 @@ function addDataToTable(data ,  table){
 }
 
 function addOneItemToTable(table, resultImage , resultTitle , resultId){
-    let forwardPage = "movie.html";
+    let forwardPage = "#movie";
     if(resultId[0] != "t"){
-        forwardPage= "celeb.html";
+        forwardPage= "#celeb";
     }
   
     let newHtml =        
@@ -98,5 +101,4 @@ function addOneItemToTable(table, resultImage , resultTitle , resultId){
 
 
 
-
-window.addEventListener("load", handlePageLoad);
+ handlePageLoad();
